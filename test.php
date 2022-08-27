@@ -8,4 +8,4 @@ use Keylogic\Popcatwrapper\Main;
 
 $popcat = new Keylogic\Popcatwrapper\Main();
 
-print_r($popcat->imdb('iron man'));
+echo $popcat->drake('gay', "gay");
