@@ -202,15 +202,15 @@ class Main {
   }
   public function facts(string $text): string {
     $text = str_replace(" ", "+", $text);
-    return json_decode(file_get_contents('https://api.popcat.xyz/facts?text='.$text))->facts;
+    return 'https://api.popcat.xyz/facts?text='.$text
   }
   public function alert(string $text): string {
     $text = str_replace(" ", "+", $text);
-    return json_decode(file_get_contents('https://api.popcat.xyz/alert?text='.$text))->text;
+    return 'https://api.popcat.xyz/alert?text='.$text;
   }
   public function caution(string $text): string {
     $text = str_replace(" ", "+", $text);
-    return json_decode(file_get_contents('https://api.popcat.xyz/caution?text='.$text))->text;
+    return 'https://api.popcat.xyz/caution?text='.$text;
   }
 }
 ?>
