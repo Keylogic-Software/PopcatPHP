@@ -20,4 +20,8 @@ class Main {
   public function element(string $element): object {
     return json_decode(file_get_contents("https://api.popcat.xyz/periodic-table?element=".$element));
   }
+  public function imdb(string $movie): object {
+    $movie = str_replace(" ", "+", $movie);
+    return json_decode(file_get_contents("https://api.popcat.xyz/imdb?q=".$movie));
+  }
 }

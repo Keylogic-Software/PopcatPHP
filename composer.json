@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Givinghawk\\Popcatwrapper\\": "src/"
+            "Keylogic\\Popcatwrapper\\": "src/"
         }
     },
     "authors": [
