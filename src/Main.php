@@ -202,7 +202,7 @@ class Main {
   }
   public function facts(string $text): string {
     $text = str_replace(" ", "+", $text);
-    return 'https://api.popcat.xyz/facts?text='.$text
+    return 'https://api.popcat.xyz/facts?text='.$text;
   }
   public function alert(string $text): string {
     $text = str_replace(" ", "+", $text);
@@ -211,6 +211,9 @@ class Main {
   public function caution(string $text): string {
     $text = str_replace(" ", "+", $text);
     return 'https://api.popcat.xyz/caution?text='.$text;
+  }
+  public function pickupline(): string {
+    return json_decode(file_get_contents('https://api.popcat.xyz/pickuplines'))->pickupline;
   }
 }
 ?>

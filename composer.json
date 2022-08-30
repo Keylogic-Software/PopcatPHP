@@ -16,5 +16,7 @@
             "name": "Keylogic software"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.4"
+    }
 }
