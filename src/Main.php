@@ -215,5 +215,18 @@ class Main {
   public function pickupline(): string {
     return json_decode(file_get_contents('https://api.popcat.xyz/pickuplines'))->pickupline;
   }
+  public function gay(string $avatar): string {
+    return 'https://api.popcat.xyz/gay?avatar='.$avatar;
+  }
+  public function jail(string $avatar): string {
+    return 'https://api.popcat.xyz/jail?avatar='.$avatar;
+  }
+  public function skulls(string $text): string {
+    $text = str_replace(" ", "%20", $text);
+    return 'https://api.popcat.xyz/skulls?text='.$text;
+  }
+  public function rgb(string $avatar): string {
+    return 'https://api.popcat.xyz/rgb?avatar='.$avatar;
+  }
 }
 ?>
