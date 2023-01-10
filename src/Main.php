@@ -12,7 +12,7 @@ class Main {
     }
   }
   
-  public static function welcome(string $avatar, string $name, string $server, string $membercount, string $background = 'https://cdn.discordapp.com/attachments/850808002545319957/859359637106065408/bg.png'): string {
+  public static function welcome(string $avatar, string $name, string $server, int $membercount, string $background = 'https://cdn.discordapp.com/attachments/850808002545319957/859359637106065408/bg.png'): string {
     $newmembercount = $membercount + 1;
     $servername = str_replace(" ", "+", $servername);
     $name = str_replace(" ", "+", $name);
