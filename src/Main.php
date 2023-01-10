@@ -3,12 +3,12 @@
 namespace Keylogic\Popcatwrapper;
 
 class Main {
-  public static function makeServer(string $name, boolean $default = true) {
+  public static function makeServer(string $name, bool $default = true) {
     if ($default) {
       $name = str_replace(' ', '+', $name);
-      return string "Welcome+To+{$name}!";
+      return "Welcome+To+{$name}!";
     } else {
-      return string str_replace(' ', '+', $name);
+      return str_replace(' ', '+', $name);
     }
   }
   
