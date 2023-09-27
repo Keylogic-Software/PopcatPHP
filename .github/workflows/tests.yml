@@ -30,6 +30,6 @@ jobs:
     - name: Install Dependencies
       run: composer install
 
-    - name: Run PHPUnit Tests
-      run: vendor/bin/phpunit
+    - name: Run Tests
+      run: php test.php
 
