@@ -3,5 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $popcat = new Keylogic\Popcatwrapper\Main();
 
-$popcat->element('He');
-$popcat->imdb('The bee movie');
+echo $popcat->element('He');
+echo $popcat->imdb('The bee movie');
+echo $popcat->screenshot('https://google.com');
+echo 'Tests completed!';
