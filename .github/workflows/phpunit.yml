@@ -1,0 +1,35 @@
+name: PHP Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: mbstring, curl
+
+    - name: Install Composer
+      run: |
+        php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+        php composer-setup.php --quiet
+        php -r "unlink('composer-setup.php');"
+        mv composer.phar /usr/local/bin/composer
+
+    - name: Install Dependencies
+      run: composer install
+
+    - name: Run PHPUnit Tests
+      run: vendor/bin/phpunit
+
