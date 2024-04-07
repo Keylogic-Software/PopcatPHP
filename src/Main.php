@@ -528,10 +528,18 @@ class Main {
     
     public function nokia(string $img_url): string {
         if (empty($img_url)) {
-            return "Error: Missing required parameter: img_url.";
+            return "Error: Missing required parameter: img_url";
         }
     
         return $this->baseUrl . "nokia?image=" . $img_url;
+    }
+
+    public function userquote(string $quote, string $image, string $name): string {
+        if (empty($quote) || empty($image) || empty($name)) {
+            return "Error: Missing required parameter(s): quote, image, name";
+        }
+
+        return $this->baseUrl . "user-quote?text=" . $quote . "&image=" . $image . "&name=" . $name;
     }
   
 }
