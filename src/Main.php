@@ -531,7 +531,7 @@ class Main {
             return "Error: Missing required parameter: img_url";
         }
     
-        return $this->baseUrl . "user-quote?image=" . $img_url;
+        return $this->baseUrl . "nokia?image=" . $img_url;
     }
 
     public function userquote(string $quote, string $image, string $name): string {
@@ -539,7 +539,7 @@ class Main {
             return "Error: Missing required parameter(s): quote, image, name";
         }
 
-        return $this->baseUrl . "nokia?text=" . $quote . "&image=" . $image . "&name=" . $name;
+        return $this->baseUrl . "user-quote?text=" . $quote . "&image=" . $image . "&name=" . $name;
     }
   
 }
