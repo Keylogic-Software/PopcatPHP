@@ -527,7 +527,7 @@ class Main {
     }
     
     public function nokia(string $img_url): string {
-        if empty($img_url) {
+        if (empty($img_url)) {
             return "Error: Missing required parameter: img_url";
         }
     
